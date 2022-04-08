@@ -1,23 +1,23 @@
 package model;
 
-public class Node {
+public class Node<T> {
 
-	private int key;
-	private String value;
+	private T key;
+	private T value;
 
 	// Enlaces
 
 	private Node right;
 	private Node left;
 
-	public Node(int key, String value) {
+	public Node(T key, T value) {
 
 		this.key = key;
 		this.value = value;
 
 	}
 
-	public void insert(int newkey, String value) {
+	public void insert(T newkey, T value) {
 
 		if (newkey < this.key) {
 
@@ -48,19 +48,19 @@ public class Node {
 		}
 	}
 
-	public int getKey() {
+	public T getKey() {
 		return key;
 	}
 
-	public void setKey(int key) {
+	public void setKey(T key) {
 		this.key = key;
 	}
 
-	public String getValue() {
+	public T getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(T value) {
 		this.value = value;
 	}
 

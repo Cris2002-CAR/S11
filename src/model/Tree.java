@@ -1,10 +1,10 @@
 package model;
 
-public class Tree {
+public class Tree<T> {
 
 	private Node root;
 
-	public void add(int key, String value) {
+	public void add(T key, T value) {
 
 		if (root == null) {
 
@@ -39,13 +39,13 @@ public class Tree {
 
 	}
 
-	public Node triggerSearch(int key) {
+	public Node triggerSearch(T key) {
 
 		return search(root, key);
 
 	}
 
-	public Node search(Node node, int key) {
+	public Node search(Node node, T key) {
 
 		if (node == null) {
 
@@ -89,14 +89,14 @@ public class Tree {
 		}
 	}
 
-	public void triggerDelete(int key) {
+	public void triggerDelete(T key) {
 		if (root != null) {
 			root = delete(root, key);
 		}
 
 	}
 
-	public Node delete(Node current, int key) {
+	public Node delete(Node current, T key) {
 
 		if (current.getKey() == key) {
 
