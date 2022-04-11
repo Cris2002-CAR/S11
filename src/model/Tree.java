@@ -4,7 +4,7 @@ public class Tree<T> {
 
 	private Node root;
 
-	public void add(T key, T value) {
+	public void add(int key, T value) {
 
 		if (root == null) {
 
@@ -39,13 +39,13 @@ public class Tree<T> {
 
 	}
 
-	public Node triggerSearch(T key) {
+	public Node triggerSearch(int key) {
 
 		return search(root, key);
 
 	}
 
-	public Node search(Node node, T key) {
+	public Node search(Node node, int key) {
 
 		if (node == null) {
 
@@ -59,7 +59,7 @@ public class Tree<T> {
 		}
 
 		/////////// procedimientos
-
+	
 		if (key < node.getKey()) {
 
 			return search(node.getLeft(), key);
@@ -89,14 +89,14 @@ public class Tree<T> {
 		}
 	}
 
-	public void triggerDelete(T key) {
+	public void triggerDelete(int key) {
 		if (root != null) {
 			root = delete(root, key);
 		}
 
 	}
 
-	public Node delete(Node current, T key) {
+	public Node delete(Node current, int key) {
 
 		if (current.getKey() == key) {
 
@@ -134,19 +134,6 @@ public class Tree<T> {
 		}
 
 		return current;
-	}
-	
-	//this
-	public static <T extends Comparable> void comparar(T a, T b){
-		int result = a.compareTo(b);
-		if (result > 0) {
-			System.out.println("a es mayor que b"+ a);
-		} else if (result < 0) {
-			System.out.println("a es menor que b");
-		}else {
-			System.out.println("a y b son iguales");
-		}
-
 	}
 
 }

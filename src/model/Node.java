@@ -2,7 +2,7 @@ package model;
 
 public class Node<T> {
 
-	private T key;
+	private int key;
 	private T value;
 
 	// Enlaces
@@ -10,14 +10,14 @@ public class Node<T> {
 	private Node right;
 	private Node left;
 
-	public Node(T key, T value) {
+	public Node(int key, T value) {
 
 		this.key = key;
 		this.value = value;
 
 	}
 
-	public void insert(T newkey, T value) {
+	public void insert(int newkey, T value) {
 
 		if (newkey < this.key) {
 
@@ -48,11 +48,11 @@ public class Node<T> {
 		}
 	}
 
-	public T getKey() {
+	public int getKey() {
 		return key;
 	}
 
-	public void setKey(T key) {
+	public void setKey(int key) {
 		this.key = key;
 	}
 
