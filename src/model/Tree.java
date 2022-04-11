@@ -135,5 +135,18 @@ public class Tree<T> {
 
 		return current;
 	}
+	
+	//this
+	public static <T extends Comparable> void comparar(T a, T b){
+		int result = a.compareTo(b);
+		if (result > 0) {
+			System.out.println("a es mayor que b"+ a);
+		} else if (result < 0) {
+			System.out.println("a es menor que b");
+		}else {
+			System.out.println("a y b son iguales");
+		}
+
+	}
 
 }
