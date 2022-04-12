@@ -52,10 +52,13 @@ public class TreeTest {
 	public void delete() {
 		setupScenary2();
 
-		int key=5;
-		int value=3;
+		int key=10;
+		int value=78;
 
 		x.add(key, value);
 		x.triggerDelete(key);
+		
+		Node y=x.triggerSearch(key);
+		assertEquals(y, null);
 	}
 }

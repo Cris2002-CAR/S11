@@ -5,9 +5,9 @@ import model.Tree;
 
 public class Main {
 
+	public static Tree t = new Tree();
+	
 	public static void main(String[] args) {
-		
-		Tree t = new Tree();
 		
 		t.add(10, "A");
 		t.add(-2, "B");
