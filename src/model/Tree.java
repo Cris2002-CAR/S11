@@ -85,7 +85,7 @@ public class Tree<T> {
 		if (current.getRight() == null) {
 			return current;
 		} else {
-			return getMin(current.getRight());
+			return getMax(current.getRight());
 		}
 	}
 

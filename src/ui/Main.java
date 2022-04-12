@@ -17,19 +17,17 @@ public class Main {
 		t.add(-60, "F");
 		
 		t.triggerInOrder();
-		
-		Node node = t.triggerSearch(20);
-		
+		System.out.println();
+		t.triggerDelete(4);
+		t.triggerDelete(20);
+		t.triggerInOrder();
+		System.out.println();
+		t.add(12, "R");
+		t.add(32, "H");
+		t.triggerInOrder();
 		System.out.println();
 		
-		if(node == null) {
-			
-			System.out.println("El nodo no se encuentra en el arbol");
-			
-		}else {
-			
-			System.out.println(node.getKey()+", "+node.getValue());
-		}
+		
 		
 	}
 
