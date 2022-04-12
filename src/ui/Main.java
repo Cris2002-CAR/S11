@@ -1,5 +1,11 @@
 package ui;
 
+/*
+ * Grupo:
+ * Cristian Cardona
+ * Jesus Garces
+ */
+
 import model.Node;
 import model.Tree;
 
